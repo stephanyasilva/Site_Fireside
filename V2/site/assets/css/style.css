@@ -1,0 +1,227 @@
+
+@font-face {
+  font-family: 'TT Backwards';
+  src: url('../font/tt_backwards_sans_trial_regular.woff') format('woff'),
+       url('../font/tt_backwards_sans_trial_black.woff') format('woff'),
+       url('../font/tt_backwards_sans_trial_bold.woff') format('woff'),
+       url('../font/Cinzel-Bold.woff') format('woff'),
+       url('../font/Cinzel-Medium.woff') format('woff'),
+       url('../font/Cinzel-Regular.woff') format('woff')
+}
+
+body{
+    font-family: 'TT Backwards', sans-serif !important;
+    overflow-x: hidden;
+    margin: 0;
+    height: 0;
+}
+
+.bg-vermelhoEscuro{
+    background: #67080a;
+}
+
+/* NAVBAR */
+.navbar-nav {
+    font-size: 20px;
+    --bs-nav-link-color: #ffffff;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show .nav-item.active 
+.dropdown.active .nav-item.show .dropdown.show
+a.navlink{
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+#mainNavbar {
+    padding: 50px 0;
+    transition: all 0.3s ease;
+}
+
+/* tamanho da logo */
+#mainNavbar .logo {
+    transition: all 0.3s ease;
+}
+
+/* logo escura começa escondida */
+.logo-dark {
+    display: none;
+}
+
+/* quando scroll acontecer */
+#mainNavbar.scrolled {
+    background: #67080a;
+    padding: 10px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* troca de logos */
+#mainNavbar.scrolled .logo-light {
+    display: none;
+}
+
+#mainNavbar.scrolled .logo-dark {
+    display: block;
+}
+
+/*dropdown*/
+.dropdown-item{
+    font-size: 20px;
+}
+
+.custom-dropdown {
+    border: 1px solid #b4b4b4; 
+    border-radius: 8px;   
+    box-shadow: 0 0 0 1px #fff, 0 0 0 2px #b4b4b4; /* cria o espaço e a segunda borda */
+    margin-top: 8px;
+    padding: 10px 0;
+}
+
+.custom-dropdown .dropdown-item {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background-color: #67080a;
+    color: #ffffff;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #67080a;
+    background-color: #ffffff;
+}
+
+/* FOOTER */
+.text-footer{
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.link-ndecoration{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.text-copy{
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* INDEX */
+#hero{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 2;
+}
+
+/* Carrossel */           
+.hero-carousel{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+.hero-carousel-wrapper{
+width:600px;
+height:400px;
+overflow:hidden;
+position:relative;
+}
+
+.hero-carousel-wrapper section{
+height:400px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero-carousel-wrapper{
+transition:transform .6s ease;
+}
+
+#s1:checked ~ .hero-carousel-wrapper{
+transform:translateY(0);
+}
+
+#s2:checked ~ .hero-carousel-wrapper{
+transform:translateY(-400px);
+}
+
+#s3:checked ~ .hero-carousel-wrapper{
+transform:translateY(-800px);
+}
+
+.hero-nav{
+display:flex;
+flex-direction:column;
+align-items:center;
+position:relative;
+gap:20px;
+}
+
+.hero-nav label{
+cursor:pointer;
+font-weight:600;
+}
+
+.hero-line{
+position:absolute;
+left:50%;
+top:0;
+width:2px;
+height:100%;
+background:#ccc;
+z-index:-1;
+}
+
+@media (max-width:768px){
+    .hero-video{
+        display:none;
+    }
+
+    #hero{
+        background:url("../images/og-default.png") center/cover no-repeat; /*****NÃO ESQUECER DE MUDAR****/
+    }
+}
