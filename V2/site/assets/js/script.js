@@ -9,18 +9,3 @@ window.addEventListener("scroll", function() {
     }
 
 });
-
-const slides = ["s1","s2","s3"];
-let current = 0;
-
-setInterval(()=>{
-
-current++;
-
-if(current >= slides.length){
-current = 0;
-}
-
-document.getElementById(slides[current]).checked = true;
-
-},10000);

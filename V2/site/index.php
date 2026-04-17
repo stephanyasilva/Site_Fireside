@@ -5,7 +5,7 @@
     $ogUrl = 'https://www.firesideservicos.com.br';
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
     <?php include 'includes/head.php'; ?>
@@ -21,53 +21,55 @@
             </video>
             <div class="container hero-content">
                 <div class="row">
-                    <div class="col-12">
-                        
-
-<div class="container py-5">
-
-<div class="hero-carousel">
-
-<input type="radio" name="slider" id="s1" checked hidden>
-<input type="radio" name="slider" id="s2" hidden>
-<input type="radio" name="slider" id="s3" hidden>
-
-<div class="hero-carousel-wrapper">
-
-<section class="hero-slide">
-<h2>Título 1</h2>
-<p>Conteúdo do primeiro slide</p>
-</section>
-
-<section class="hero-slide">
-<h2>Título 2</h2>
-<p>Conteúdo do segundo slide</p>
-</section>
-
-<section class="hero-slide">
-<h2>Título 3</h2>
-<p>Conteúdo do terceiro slide</p>
-</section>
-
-</div>
-
-<div class="hero-nav">
-
-<label for="s1">01</label>
-<label for="s2">02</label>
-<label for="s3">03</label>
-
-<div class="hero-line"></div>
-
-</div>
-
-</div>
-</div>
-
-
-
-                    </div>                    
-                </div>
+                    <div class="col">
+                        <div id="verticalCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000"> 
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#verticalCarousel" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#verticalCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#verticalCarousel" data-bs-slide-to="2"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="hero-slide slide1">
+                                        <div class="container">
+                                            <div class="efect-slide">
+                                                <span class="titulo-cinzel">Fireside</span><br>
+                                                <span class="titulo-hero">Especialistas em Segurança Contra Incêndio <br> protegendo vidas e patrimônios</span>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="hero-slide slide2">
+                                        <div class="container">
+                                            <div class="efect-slide">
+                                                <span class="titulo-cinzel">Soluções completas</span><br>
+                                                <span class="titulo-hero">Projeto, execução e regularização em <br>conformidade com as normas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="hero-slide slide3">
+                                        <div class="container">
+                                            <div class="efect-slide">
+                                                <span class="titulo-cinzel">Prevenção inteligente</span> <br>
+                                                <span class="titulo-hero">Cuidamos de cada etapa para sua empresa <br> operar com tranquilidade</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>  
+                <div class="row z-3">
+                    <div class="col btn-conheca">
+                        <a href="#oquefazemos">
+                            <img src="assets/images/btn-conheca.png" alt="">
+                        </a>                       
+                    </div>
+                </div>                          
             </div>
         </section>
         <section id="oquefazemos">
