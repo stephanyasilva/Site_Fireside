@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
     <div class="container">
 
-        <a class="navbar-brand" href="#">
-            <img class="logo logo-light" src="assets/images/logo-fireside-ht.png" alt="Fireside">
-            <img class="logo logo-dark" src="assets/images/logo-fireside-hv.png" alt="Fireside">
+        <a class="navbar-brand mt-3 mt-md-2" href="#">
+            <img class="logo logo-light img-fluid" src="assets/images/logo-fireside-ht.png" alt="Fireside">
+            <img class="logo logo-dark img-fluid" src="assets/images/logo-fireside-hv.png" alt="Fireside">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler me-3 me-md-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse text-navbar" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre Nós</a>
+                    <a class="nav-link" href="sobre.php">Sobre Nós</a>
                 </li>
 
                 <li class="nav-item dropdown px-5 text-center">
@@ -32,7 +32,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="contato.php">Contato</a>
                 </li>
             </ul>
         </div>

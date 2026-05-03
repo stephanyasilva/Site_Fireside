@@ -27,9 +27,9 @@
                         <div class="col-6 col-md-6 col-xl-3 pt-2 py-0 pb-5 py-xl-4 ps-xl-5 text-center text-xl-start">
                             Mapa do Site
                             <br><br>
-                            Sobre Nós <br>
-                            Serviços <br>
-                            Contato 
+                            <a href="sobre.php" class=" link-ndecoration" rel="noopener noreferrer">Sobre Nós</a><br>
+                            <a href="servicos.php" class=" link-ndecoration" rel="noopener noreferrer">Serviços</a><br>
+                            <a href="contato.php" class=" link-ndecoration" rel="noopener noreferrer">Contato</a>
                         </div>
                     </div>
                 </div>
@@ -44,5 +44,6 @@
         <!-- JS -->
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/script.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </body>
 </html>
