@@ -1,9 +1,9 @@
 <section id="contatoForm">
     <div class="container">
         <div class="row">
-            <div id="cardContato" class="col mb-5">
+            <div id="cardContato" class="col my-5">
                 <div class="row">
-                    <div class="col ms-md-5 mt-5">
+                    <div class="col m-md-5 mt-5">
                         <span class="titulo-cinzelContato"><?= $tituloContato ?? 'Fale conosco' ?></span><br>
                         <span class="SubTitulo-TTContato"><?= $subtituloContato ?? '' ?></span>
                     </div>
@@ -12,7 +12,6 @@
                     <div class="col my-5 m-md-5">
                         <div class="form-contato p-5">
                             <form id="formContato">
-
                                 <div class="row">
                                     <div class="col-12 col-md-6 pb-3 pb-md-0">
                                         <label for="nome" class="form-label">Nome</label>
@@ -23,7 +22,6 @@
                                         <input type="text" class="form-control" id="empresa" name="empresa"> 
                                     </div>
                                 </div>
-
                                 <div class="row pt-3">
                                     <div class="col-12 col-md-6 pb-3 pb-md-0">
                                         <label for="email" class="form-label">E-mail</label>
@@ -34,7 +32,6 @@
                                         <input type="tel" id="telefone" name="telefone" class="form-control" placeholder="(11) 99999-9999">
                                     </div>
                                 </div>
-
                                 <div class="row pt-3">
                                     <div class="col-12">
                                         <label for="servico" class="form-label">Serviço</label>

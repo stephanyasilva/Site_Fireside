@@ -30,26 +30,26 @@
                             </div>
                             <div class="carousel-inner d-flex flex-lg-column">
                                 <div class="carousel-item active">
-                                    <div class="hero-slide slide1">                                        
+                                    <div class="hero-slide pt-md-5 slide1">                                        
                                         <div class="efect-slide">
                                             <span class="titulo-cinzel">Fireside</span><br>
-                                            <span class="titulo-hero">Especialistas em Segurança Contra Incêndio <br> protegendo vidas e patrimônios</span>
+                                            <span class="SubTitulo-TT">Especialistas em Segurança Contra Incêndio <br> protegendo vidas e patrimônios</span>
                                         </div>  
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <div class="hero-slide slide2">
+                                    <div class="hero-slide pt-md-5 slide2">
                                         <div class="efect-slide">
                                             <span class="titulo-cinzel">Soluções completas</span><br>
-                                            <span class="titulo-hero">Projeto, execução e regularização em <br>conformidade com as normas</span>
+                                            <span class="SubTitulo-TT">Projeto, execução e regularização em <br>conformidade com as normas</span>
                                         </div>                                        
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <div class="hero-slide slide3">
+                                    <div class="hero-slide pt-md-5 slide3">
                                         <div class="efect-slide">
                                             <span class="titulo-cinzel">Prevenção inteligente</span> <br>
-                                            <span class="titulo-hero">Cuidamos de cada etapa para sua empresa <br> operar com tranquilidade</span>
+                                            <span class="SubTitulo-TT">Cuidamos de cada etapa para sua empresa <br> operar com tranquilidade</span>
                                         </div>
                                     </div>
                                 </div>

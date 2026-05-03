@@ -85,6 +85,16 @@ body{
     font-style: normal;
     font-size: 40px;
     text-transform: uppercase;
+    color:var(--branco);
+}
+
+.SubTitulo-TT{
+    font-family: "TT Backwards";
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    color:var(--branco);
 }
 
 .titulo-cinzelSection{
@@ -224,6 +234,76 @@ body{
     text-align:center;
 }
 
+/* SECTION - CONTATO FORM */
+#cardContato{
+    background-image: url('../images/bg-formContato.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+.form-contato{
+    background-color: var(--vermelho);
+    border-radius:8px;
+}
+
+.form-label{
+    color: var(--branco);
+    font-size: 18px;
+}
+
+.form-control{
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+.form-control:focus, .form-select:focus{
+    border-color: var(--preto);
+    box-shadow: 0 0 0 1px var(--cinza-claro);
+}
+
+.form-select option:checked {
+    background-color: var(--cinza-claro);
+}
+
+.form-select{
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+.btn-enviar{
+    color: var(--branco);
+    border: 2px solid var(--branco);
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 5px 100px;
+}
+
+.btn-enviar:hover, .btn-enviar:active{
+    color: var(--vermelho) !important;
+    border: 2px solid var(--branco) !important;
+    background-color: var(--branco) !important;
+    font-weight: bold;
+}
+
+.contato-wapp{
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 18px;
+}
+
+/** INDEX **/
 /* SECTION - HERO */
 #hero{
     position:relative;
@@ -258,11 +338,6 @@ body{
     flex-direction:column;   /* empilha verticalmente */
     justify-content:center;  /* carrossel fica centralizado */
     color:var(--branco);
-}
-
-.titulo-hero{
-    font-size: 50px;
-    font-weight: bold;
 }
 
 /* Carrossel */
@@ -333,14 +408,14 @@ body{
 }
 
 /* Botão Conheça Mais */
-.btn-conheca img {
-    display: block;
+.btn-conheca img {    
     animation: pulo 2s ease-in-out infinite;
     will-change: transform;
 }
 
 .btn-conheca{
-    margin-top:-5em;      /* joga para o final do HERO */
+    position: absolute;
+    top: 90%;      /* joga para o final do HERO */
     padding-bottom:40px;  /* distância do fundo */    
     z-index:10;
 }
@@ -547,73 +622,46 @@ body{
     animation-play-state: paused;
 }
 
-/* SECTION - CONTATO FORM */
-#cardContato{
-    background-image: url('../images/bg-contato.png');
-    background-size: 101% 101%;
+
+/** SOBRE NÓS **/
+/* SECTION - HERO */
+#sobre{
+    background-image: url('../images/bg-sobre.png');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: var(--borda-dFina) solid var(--cinza-medio);
-    border-radius: 8px;
-    box-shadow: 
-        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
-        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+    height:100vh;
 }
 
-.form-contato{
-    background-color: var(--vermelho);
-    border-radius:8px;
+.sobre-content{
+    position:relative;
+    z-index:3;
+    height:100vh;
+    display:flex;
+    flex-direction:column;   /* empilha verticalmente */
+    justify-content:center;  /* carrossel fica centralizado */
+    color:var(--branco);
 }
 
-.form-label{
-    color: var(--branco);
-    font-size: 18px;
+.btn-sobre{
+    position: absolute;
+    top: 90%;
 }
 
-.form-control{
-    border: var(--borda-dFina) solid var(--cinza-medio);
-    border-radius: 8px;
-    box-shadow: 
-        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
-        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+.btn-sobre img{
+    animation: pulo 2s ease-in-out infinite;
+    will-change: transform;
 }
 
-.form-control:focus, .form-select:focus{
-    border-color: var(--preto);
-    box-shadow: 0 0 0 1px var(--cinza-claro);
-}
 
-.form-select option:checked {
-    background-color: var(--cinza-claro);
-}
-
-.form-select{
-    border: var(--borda-dFina) solid var(--cinza-medio);
-    border-radius: 8px;
-    box-shadow: 
-        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
-        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
-}
-
-.btn-enviar{
-    color: var(--branco);
-    border: 2px solid var(--branco);
-    font-size: 18px;
-    border-radius: 8px;
-    padding: 5px 100px;
-}
-
-.btn-enviar:hover, .btn-enviar:active{
-    color: var(--vermelho) !important;
-    border: 2px solid var(--branco) !important;
-    background-color: var(--branco) !important;
-    font-weight: bold;
-}
-
-.contato-wapp{
-    text-decoration: none;
-    color: var(--branco);
-    font-size: 18px;
+/** CONTATO **/
+/* SECTION - CONTATO */
+#contato{
+    background-image: url('../images/bg-contato.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
 }
 
 /* RESPONSIVO */
@@ -626,6 +674,10 @@ body{
  }
 
 @media (max-width: 991.98px) { 
+    .SubTitulo-TT {
+        font-size: 38px;
+    }
+
     .titulo-cinzelContato{
         font-size: 28px;
     }
@@ -633,11 +685,8 @@ body{
     .SubTitulo-TTContato{
         font-size: 30px;
     }
-    /* SECTION - HERO */    
-    .titulo-hero {
-        font-size: 38px;
-    }
 
+    /* SECTION - HERO */ 
     /* Indicadores - embaixo */    
     .carousel-indicators {    
         left: 0;
@@ -649,11 +698,6 @@ body{
 
     .carousel-indicators [data-bs-target] {
         margin: 12px 9px;
-    }
-
-    .btn-conheca {
-        display: flex;
-        justify-content: center;
     }
 
     /* SECTION - O QUE A FAZEMOS */
@@ -714,7 +758,11 @@ body{
     
 }
 
-@media (max-width: 480px) {    
+@media (max-width: 480px) { 
+    .SubTitulo-TT {
+        font-size: 35px;
+    }
+
     .titulo-cinzelSection {
         font-size: 25px;
     }
@@ -735,16 +783,8 @@ body{
     }
 
     /* SECTION - HERO*/
-    .titulo-hero {
-        font-size: 35px;
-    }
-
     .hero-slide {
         height: 97vh;
-    }
-
-    .btn-conheca {
-        margin-top: -5em;
     }
 
     /* SECTION - O QUE A FAZEMOS */
@@ -762,7 +802,11 @@ body{
     }
 }
 
-@media (max-width: 375px) {    
+@media (max-width: 375px) {  
+    .SubTitulo-TT {
+        font-size: 30px;
+    }  
+
     .titulo-cinzelSection {
         font-size: 25px;
     }
@@ -774,11 +818,6 @@ body{
     /* NAVBAR */
     #mainNavbar .logo {
         width: 220px;
-    }
-
-    /* SECTION - HERO*/
-    .titulo-hero {
-        font-size: 30px;
     }
 
     /* SECTION - O QUE A FAZEMOS */
