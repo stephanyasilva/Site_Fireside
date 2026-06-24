@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
     <div class="container">
 
-        <a class="navbar-brand mt-3 mt-md-2" href="#">
+        <a class="navbar-brand mt-3 mt-md-2" href="index.php">
             <img class="logo logo-light img-fluid" src="assets/images/logo-fireside-ht.png" alt="Fireside">
             <img class="logo logo-dark img-fluid" src="assets/images/logo-fireside-hv.png" alt="Fireside">
         </a>
@@ -11,12 +11,11 @@
         </button>
 
         <div class="collapse navbar-collapse text-navbar" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto text-start text-md-center">
                 <li class="nav-item">
                     <a class="nav-link" href="sobre.php">Sobre Nós</a>
                 </li>
-
-                <li class="nav-item dropdown px-5 text-center">
+                <li class="nav-item dropdown px-md-5">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                         Serviços
                     </a>
@@ -30,7 +29,6 @@
                         <li><a class="dropdown-item" href="#">Placas de identificação</a></li>
                     </ul>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="contato.php">Contato</a>
                 </li>

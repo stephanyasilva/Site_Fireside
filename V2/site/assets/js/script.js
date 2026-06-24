@@ -94,3 +94,119 @@ window.onSubmit = function(token) {
         }
     });
 };
+
+/* Modal Galeria Carrossel */
+const modalElement = document.getElementById('videoModal');
+const modalVideo = document.getElementById('modalVideo');
+let videoModal = null;
+
+if (modalElement && modalVideo) {
+    videoModal = new bootstrap.Modal(modalElement);
+}
+
+// Gera thumbnail automática dos vídeos
+function gerarThumbnail(video) {
+    return new Promise((resolve, reject) => {
+        const finalizar = () => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+
+            ctx.drawImage(
+                video,
+                0,
+                0,
+                canvas.width,
+                canvas.height
+            );
+
+            resolve(
+                canvas.toDataURL('image/webp', 0.82)
+            );
+        };
+
+        const irParaFrame = () => {
+            const segundo = Number.isFinite(video.duration)
+                ? Math.min(1, Math.max(video.duration - 0.1, 0))
+                : 0;
+
+            if (Math.abs(video.currentTime - segundo) < 0.05) {
+                finalizar();
+                return;
+            }
+
+            video.currentTime = segundo;
+        };
+        video.addEventListener(
+            'loadeddata',
+            irParaFrame,
+            { once: true }
+        );
+        video.addEventListener(
+            'seeked',
+            finalizar,
+            { once: true }
+        );
+        video.addEventListener(
+            'error',
+            reject,
+            { once: true }
+        );
+        video.load();
+    });
+}
+
+// Aplica thumbnail nos cards
+document .querySelectorAll('.video-card video:not([poster])').forEach((video) => {
+    gerarThumbnail(video)
+
+    .then((thumb) => {
+        video.setAttribute(
+            'poster',
+            thumb
+        );
+        video.pause();
+    })
+
+    .catch(() => {
+        console.log(
+            'Não foi possível gerar thumbnail:',
+            video
+        );
+    });
+});
+
+// Abrir vídeo no modal
+document.querySelectorAll('.video-card').forEach((card) => {
+    card.addEventListener('click', () => {
+        const caminhoVideo = card.dataset.video;
+        modalVideo.src = caminhoVideo;
+        modalVideo.muted = true;
+        modalVideo.volume = 0;
+        modalVideo.load();
+        videoModal.show();
+        modalVideo.play()
+        .catch((erro) => {
+            console.error(
+                'Erro ao iniciar vídeo:',
+                erro
+            );
+        });
+    });
+});
+
+// Fechar modal
+if (modalElement) {
+    modalElement.addEventListener(
+        'hidden.bs.modal',
+        () => {
+            modalVideo.pause();
+            modalVideo.removeAttribute(
+                'src'
+            );
+            modalVideo.load();
+        }
+    );
+}
+

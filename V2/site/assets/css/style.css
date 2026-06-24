@@ -54,6 +54,7 @@
     --slide-width: 150px;
     --slide-height: 100px;
     --speed: 50s;
+    --carousel-control: #5a5a5a;
 
     /* BORDA DUPLA FINA */
     --borda-dFina: 1px;
@@ -127,6 +128,21 @@ body{
     font-optical-sizing: auto;
     font-weight: bold;
     font-size: 38px;
+    color: var(--cinza-claro);
+}
+
+.titulo-card{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-size: 26px;
+    color: var(--branco);
+}
+
+.texto-card{
+    font-family: "TT Backwards";
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 18px;
     color: var(--cinza-claro);
 }
 
@@ -240,11 +256,6 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: var(--borda-dFina) solid var(--cinza-medio);
-    border-radius: 8px;
-    box-shadow: 
-        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
-        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
 }
 
 .form-contato{
@@ -356,7 +367,6 @@ body{
     display:flex;
     align-items:center;
 }
-
 
 /* Indicadores */
 .carousel-indicators{
@@ -541,7 +551,7 @@ body{
 }
 
 /* SECTION - CLIENTES E FORNECEDORES */
-/* SLIDER */
+/* Slider */
 .slider {
     overflow: hidden;
     position: relative;
@@ -622,9 +632,8 @@ body{
     animation-play-state: paused;
 }
 
-
 /** SOBRE NÓS **/
-/* SECTION - HERO */
+/* SECTION - SOBRE*/
 #sobre{
     background-image: url('../images/bg-sobre.png');
     background-size: cover;
@@ -653,6 +662,160 @@ body{
     will-change: transform;
 }
 
+/* SECTION - OBJETIVO FIRE */
+/*#objetivoFireside{
+    background-image: url('../images/bg-fogo-fire.png');
+    background-size: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+}*/
+
+.text-objetivo{
+    font-size: 32px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* SECTION - COMO TRABALHAMOS */
+.card-CTrabalhamos{
+    background-color: var(--vermelho);
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+/* SECTION - PROJETOS EXECUTADOS */
+/* Galeria Carrossel */
+.video-carousel-section {
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+    0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+    0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+.video-carousel {
+    position: relative;
+}
+
+.video-carousel .carousel-inner {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-carousel .carousel-item {
+    transition: transform .45s ease-in-out;
+}
+
+.carrossel-galeria, .carousel-galeria-inner, .carousel-galeria-item{
+    height: auto;
+}
+
+/* Grid que mostra 4 videos lado a lado no desktop. */
+.video-row {
+    display: flex;
+    min-height: 300px;
+    width: 100%;
+}
+
+
+/* Botao clicavel que envolve cada video. */
+.video-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    background: #111;
+    cursor: pointer;
+    flex: 0 0 calc(28% - 20px); /* Desktop - 4 vídeos */
+}
+
+/* Faz o video preencher todo o espaco do card, cortando sem distorcer. */
+.video-card video {
+    width: 100%;
+    height: 300%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(.92);
+}
+
+/* Camada clara sobre o video, parecida com o exemplo da imagem. */
+.video-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, .22);
+    transition: background .2s ease;
+}
+
+.video-card:hover::after {
+    background: rgba(255, 255, 255, .08);
+}
+
+/* Circulo central do botao de play. */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(38, 38, 38, .76);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .24);
+}
+
+/* Triangulo branco dentro do botao de play. */
+.play-button::before {
+    content: "";
+    margin-left: 4px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+}
+
+/* Posiciona os botoes de anterior/proximo no canto superior direito. */
+.carousel-buttons {
+    position: absolute;
+    top: -44px;
+    right: 28px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Personaliza os controles padrao do Bootstrap. */
+.video-carousel .carousel-control-prev,
+.video-carousel .carousel-control-next {
+    position: static;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--cinza-escuro);
+    border-radius: 50%;
+    opacity: 1;
+    background: #fff;
+    color: var(--cinza-escuro);
+}
+
+.video-carousel .carousel-control-prev-icon,
+.video-carousel .carousel-control-next-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(35%);
+}
+
+#modalVideo {
+    width: 100%;
+    height: 700px;
+    object-fit: contain;
+}
 
 /** CONTATO **/
 /* SECTION - CONTATO */
@@ -664,6 +827,7 @@ body{
     height:100vh;
 }
 
+
 /* RESPONSIVO */
 @media (max-width: 1199.98px) {
     /* SECTION - O QUE A FAZEMOS */
@@ -674,16 +838,20 @@ body{
  }
 
 @media (max-width: 991.98px) { 
-    .SubTitulo-TT {
-        font-size: 38px;
+    .SubTitulo-TT, .SubTitulo-TTSection {
+        font-size: 35px;
     }
 
-    .titulo-cinzelContato{
+    .titulo-cinzelContato, .titulo-cinzelSection{
         font-size: 28px;
     }
 
     .SubTitulo-TTContato{
         font-size: 30px;
+    }
+
+    .text-objetivo {
+        font-size: 24px;
     }
 
     /* SECTION - HERO */ 
@@ -713,9 +881,14 @@ body{
     .frente-card, .verso-card{
         padding: 11px 10px;
     }
+
+    /** SOBRE NÓS **/
+    .video-card {
+        flex: 0 0 calc(50% - 15px);
+    }
+
     
 }
-
 
 @media (max-width: 767.98px) {      
     :root {
@@ -751,24 +924,34 @@ body{
         height: auto;
     }
 
+    /* SOBRE NÓS */
+    .video-card {
+        flex: 0 0 100%;
+    }
+
     /* SECTION - CONTATO FORM */
     #cardContato{
         border-radius: 0;
-    }
+    }  
+
     
 }
 
 @media (max-width: 480px) { 
-    .SubTitulo-TT {
+    .SubTitulo-TT, .SubTitulo-TTSection {
         font-size: 35px;
     }
 
-    .titulo-cinzelSection {
+    .titulo-cinzelSection, .titulo-cinzelSection{
         font-size: 25px;
     }
 
     .SubTitulo-TTSection {
         font-size: 30px;
+    }
+
+    .text-objetivo {
+        font-size: 20px;
     }
 
     :root {
@@ -800,19 +983,25 @@ body{
     .frente-card, .verso-card{
         padding: 11px 10px;
     }
+
+
 }
 
 @media (max-width: 375px) {  
-    .SubTitulo-TT {
+    .SubTitulo-TT, .SubTitulo-TTSection {
         font-size: 30px;
     }  
 
-    .titulo-cinzelSection {
+    .titulo-cinzelSection, .titulo-cinzelSection {
         font-size: 25px;
     }
 
     .SubTitulo-TTSection {
         font-size: 30px;
+    }
+
+    .text-objetivo {
+        font-size: 18px;
     }
 
     /* NAVBAR */
@@ -829,6 +1018,8 @@ body{
     .verso-card {
         font-size: 14px;
     }
+
+
 
 
 }

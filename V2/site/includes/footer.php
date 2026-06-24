@@ -3,7 +3,9 @@
                 <div class="container text-footer">
                     <div class="row">
                         <div class="col-12 col-md-12 col-xl-6 text-md-center pt-5 pb-3 py-xl-4">
-                            <img src="assets/images/logo-fireside-footer.png" alt="" class="img-fluid">
+                            <a href="index.php">
+                                <img src="assets/images/logo-fireside-footer.png" alt="" class="img-fluid">
+                            </a>                            
                         </div>
                         <div class="col-6 col-md-6 col-xl-3 pt-2 py-0 pb-5 py-xl-4 ps-xl-5 text-center text-xl-start">
                             Fale Conosco 
