@@ -1,0 +1,377 @@
+
+/* SECTION - HERO */
+#hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero-video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    min-width:100%;
+    min-height:100%;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    z-index:1;
+}
+
+#hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:1;
+}
+
+.hero-content{
+    position:relative;
+    z-index:3;
+    height:100vh;
+    display:flex;
+    flex-direction:column;   /* empilha verticalmente */
+    justify-content:center;  /* carrossel fica centralizado */
+    color:var(--branco);
+}
+
+/* Carrossel */
+.carousel-index{
+    position: static;
+}
+
+.carousel-index{
+    height:100vh !important;
+}
+
+.hero-slide{
+    height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+/* Indicadores */
+.carousel-indicators{
+    position:absolute;
+    right:18px;
+    left:auto;
+    top:50%;
+    transform:translateY(-50%);
+    flex-direction:column;
+    margin:0;
+    z-index:5;
+}
+
+/* Botão Inatico - Círculo */
+.carousel-indicators [data-bs-target]{
+    width:12px;
+    height:12px;
+    margin: 12px 0;
+    background:transparent;
+    border:2px solid var(--branco);
+    border-radius:50%;
+    opacity:0.7;
+    transition: all 0.4s ease;
+}
+
+/* Botão Ativo - Barrinha */
+.carousel-indicators .active{
+    width:30px;
+    height:1px;
+    background: var(--branco);
+    border-radius:2px;
+    opacity:1;
+}
+
+.carousel-indicators [data-bs-target] {
+    text-indent: 0;
+}
+
+/* Efeitos */
+.efect-slide{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+}
+
+.carousel-item.active .efect-slide {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botão Conheça Mais */
+.btn-conheca img {    
+    animation: pulo 2s ease-in-out infinite;
+    will-change: transform;
+}
+
+.btn-conheca{
+    position: absolute;
+    top: 90%;      /* joga para o final do HERO */
+    padding-bottom:40px;  /* distância do fundo */    
+    z-index:10;
+}
+
+@keyframes pulo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* SECTION - O QUE A FAZEMOS */
+.titulo-card{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-size: 26px;
+    color: var(--branco);
+}
+
+.texto-card{
+    font-family: "TT Backwards";
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--cinza-claro);
+}
+
+/* Card */
+.card-area {  
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+    overflow: hidden; /* evita vazamento */
+    aspect-ratio: 606 / 385; /* mantém proporção */
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+.frente-card, .verso-card{
+    position: absolute;
+    width: 101%;
+    height: 101%;
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 20px 25px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--branco);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform; /* melhora performance */
+}
+
+.frente-card{
+    align-items: flex-end;
+    justify-content: flex-start;
+    font-size: 30px;
+    z-index: 2;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.verso-card{
+    align-items: flex-start;
+    text-align: justify;
+    justify-content: flex-start;
+    font-size: 28px;
+    z-index: 3;
+    opacity: 0;
+    transform: scale(1); /* leve zoom */
+}
+
+.card-area:hover .frente-card{
+    opacity: 0;
+    transform: scale(0.95); /* dá sensação de sair */
+}
+
+.card-area:hover .verso-card{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 1199.98px) {
+    .SubTitulo-TT {
+        font-size: 40px;
+    }
+
+    .titulo-cinzel {
+    font-family: "Cinzel", serif;
+        font-size: 36px;
+    }
+
+    .verso-card {
+        font-size: 21px;
+    }
+
+    .frente-card {
+        font-size: 26px;
+    }
+
+    .titulo-cinzelSection {
+        font-size: 29px;
+    }
+
+    .SubTitulo-TTSection {
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width: 991.98px) { 
+    /* SECTION - HERO */ 
+    /* Indicadores - embaixo */    
+    .carousel-indicators {    
+        left: 0;
+        top: 80%;
+        transform: translateX(0);
+        flex-direction: row;
+        z-index: 0;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        margin: 12px 9px;
+    }
+
+    .titulo-cinzel {
+        font-size: 34px;
+    }
+
+    .SubTitulo-TT {
+        font-size: 38px;
+    }
+
+    /* SECTION - O QUE A FAZEMOS */
+    /* Card */
+    .frente-card {
+        font-size: 25px;
+    }
+
+    .verso-card {
+        font-size: 21px;
+    }
+
+    .frente-card, .verso-card{
+        padding: 11px 10px;
+    }
+
+    
+}
+
+@media (max-width: 860px) {      
+    :root {
+        /* SLIDER */
+        --slide-width: 180px;
+        --speed: 30s;
+    }
+
+    .carousel-indicators{
+        right:30px; 
+    }
+
+    .titulo-cinzel {
+        font-size: 30px;
+    }
+
+    .SubTitulo-TT {
+        font-size: 34px;
+    }
+
+    .titulo-cinzelSection {
+        font-size: 27px;
+    }
+
+    .SubTitulo-TTSection {
+        font-size: 31px;
+    }
+
+    .frente-card {
+        font-size: 21px;
+    }
+
+    .verso-card {
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 575.98px) { 
+
+}
+
+@media (max-width: 480px) { 
+    .SubTitulo-TT, .SubTitulo-TTSection {
+        font-size: 29px;
+    }
+
+    .titulo-cinzelSection, .titulo-cinzelSection{
+        font-size: 25px;
+    }
+
+    .titulo-cinzel {
+        font-size: 20px;
+    }
+
+    .text-objetivo {
+        font-size: 20px;
+    }
+
+    .btn-conheca img {
+        width: 86%;
+    }
+
+    :root {
+        /* SLIDER */
+        --slide-width: 140px;
+        --speed: 25s;
+    }
+
+
+    /* SECTION - HERO*/
+    .hero-slide {
+        height: 97vh;
+    }
+
+    /* SECTION - O QUE A FAZEMOS */
+    /* Card */
+    .frente-card {
+        font-size: 24px;
+    }
+
+    .verso-card {
+        font-size: 17px;
+    }
+
+    .frente-card, .verso-card{
+        padding: 11px 10px;
+    }
+
+    .iconeServico-link .titulo-iconeServicos {
+        font-size: 14px !important;
+    }
+
+    .slider::before, .slider::after {
+        width: 26px !important;
+    }
+
+
+} 
+
+@media (max-width: 375px) {  
+
+    /* SECTION - O QUE A FAZEMOS */
+    /* Card */
+    .frente-card {
+        font-size: 20px;
+    }
+
+    .verso-card {
+        font-size: 14px;
+    }
+
+}

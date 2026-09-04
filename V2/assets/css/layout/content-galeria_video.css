@@ -1,0 +1,154 @@
+/* Galeria Carrossel */
+.video-carousel-section {
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+    0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+    0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+.video-carousel {
+    position: relative;
+}
+
+.video-carousel .carousel-inner {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-carousel .carousel-item {
+    transition: transform .45s ease-in-out;
+}
+
+.carrossel-galeria, .carousel-galeria-inner, .carousel-galeria-item{
+    height: auto;
+}
+
+/* Grid que mostra 4 videos lado a lado no desktop. */
+.video-row {
+    display: flex;
+    min-height: 300px;
+    width: 100%;
+}
+
+
+/* Botao clicavel que envolve cada video. */
+.video-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    background: #111;
+    cursor: pointer;
+    flex: 0 0 calc(28% - 20px); /* Desktop - 4 vídeos */
+}
+
+/* Faz o video preencher todo o espaco do card, cortando sem distorcer. */
+.video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: saturate(.92);
+}
+
+/* Camada clara sobre o video, parecida com o exemplo da imagem. */
+.video-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, .22);
+    transition: background .2s ease;
+}
+
+.video-card:hover::after {
+    background: rgba(255, 255, 255, .08);
+}
+
+/* Circulo central do botao de play. */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(38, 38, 38, .76);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .24);
+}
+
+/* Triangulo branco dentro do botao de play. */
+.play-button::before {
+    content: "";
+    margin-left: 4px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #fff;
+}
+
+/* Posiciona os botoes de anterior/proximo no canto superior direito. */
+.carousel-buttons {
+    position: absolute;
+    top: -44px;
+    right: 28px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Personaliza os controles padrao do Bootstrap. */
+.video-carousel .carousel-control-prev,
+.video-carousel .carousel-control-next {
+    position: static;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--cinza-escuro);
+    border-radius: 50%;
+    opacity: 1;
+    background: #fff;
+    color: var(--cinza-escuro);
+}
+
+.video-carousel .carousel-control-prev-icon,
+.video-carousel .carousel-control-next-icon {
+    width: 16px;
+    height: 16px;
+    filter: invert(35%);
+}
+
+#modalVideo {
+    width: 100%;
+    height: 700px;
+    object-fit: contain;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) { 
+    
+}
+
+@media (max-width: 767.98px) {      
+
+}
+
+@media (max-width: 575.98px) { 
+   
+}
+
+@media (max-width: 480px) { 
+
+}
+
+@media (max-width: 375px) {  
+
+}

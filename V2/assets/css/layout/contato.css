@@ -1,0 +1,63 @@
+.titulo-cinzelContato{ 
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color:var(--branco);
+}
+
+.SubTitulo-TTContato{
+    font-family: "TT Backwards";
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--cinza-claro);
+}
+
+/* SECTION - CONTATO */
+#contato{
+    background-image: url('../../images/background/bg-contato.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) { 
+
+}
+
+@media (max-width: 767.98px) {      
+
+}
+
+@media (max-width: 575.98px) { 
+  .SubTitulo-TTSection{
+    font-size: 28px;
+  }
+
+  .titulo-cinzelSection{
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 480px) { 
+    .SubTitulo-TTSection{
+        font-size: 25px !important;
+    }
+
+    .titulo-cinzelSection{
+        font-size: 18px !important;
+    }
+
+}
+
+@media (max-width: 375px) {  
+
+}
