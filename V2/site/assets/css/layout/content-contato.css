@@ -1,0 +1,104 @@
+#cardContato{
+    background-image: url('../../images/background/bg-formContato.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.form-contato{
+    background-color: var(--vermelho);
+    border-radius:8px;
+}
+
+.form-label{
+    color: var(--branco);
+    font-size: 18px;
+}
+
+.form-control{
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+.form-control:focus, .form-select:focus{
+    border-color: var(--preto);
+    box-shadow: 0 0 0 1px var(--cinza-claro);
+}
+
+.form-select option:checked {
+    background-color: var(--cinza-claro);
+}
+
+.form-select{
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+.btn-enviar{
+    color: var(--branco);
+    border: 2px solid var(--branco);
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 5px 100px;
+}
+
+.btn-enviar:hover, .btn-enviar:active{
+    color: var(--vermelho) !important;
+    border: 2px solid var(--branco) !important;
+    background-color: var(--branco) !important;
+    font-weight: bold;
+}
+
+.contato-wapp{
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 18px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) { 
+
+    
+}
+
+@media (max-width: 767.98px) {      
+
+}
+
+@media (max-width: 575.98px) { 
+
+    #cardContato{
+        border-radius: 0;
+    }  
+
+    .titulo-cinzelContato {
+        font-size: 28px;
+    }
+
+
+    .SubTitulo-TTContato {        
+        font-size: 26px;        
+    }
+    
+}
+
+@media (max-width: 480px) { 
+    .btn-enviar {
+        padding: 5px 23px;
+    }
+
+}
+
+@media (max-width: 375px) {  
+
+}

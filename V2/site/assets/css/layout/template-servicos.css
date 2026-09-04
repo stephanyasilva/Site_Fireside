@@ -1,0 +1,118 @@
+
+#template-servicos{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+.text-descricao{
+    font-size: 28px;
+    text-align: justify;
+}
+
+.titulo-bnfc{
+    font-family: "Cinzel", serif;
+    font-size:40px;
+    color: var(--cinza-escuro);
+}
+
+.list-bnfc{
+    font-size: 28px;
+}
+
+.carousel-templateServicos{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carousel-templateServicos{
+    position: relative;
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+    0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+    0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);    
+}
+
+/* Personaliza os controles padrao do Bootstrap. */
+.carousel-templateServicos .carousel-control-prev-icon,
+.carousel-templateServicos .carousel-control-next-icon{
+    border: 2px solid var(--branco);
+    border-radius: 50%;
+    opacity: 1;
+    color: var(--branco);
+}
+
+.btn-voltar_servicos{
+    color: var(--cinza-escuro);
+    background-color: transparent;
+    border-color: var(--cinza-escuro);
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 0.75em 15em;
+}
+
+.btn-voltar_servicos:hover{
+    color: var(--branco);
+    background-color: var(--cinza-escuro);
+    border-color: var(--cinza-escuro);
+}
+
+/* RESPONSIVO */
+@media (max-width: 1199.98px) {
+    .text-descricao, .list-bnfc{
+        font-size: 28px;
+    }
+
+    .btn-voltar_servicos{
+        font-size: 20px;
+        padding: 0.75em 12em;
+    }
+
+}
+
+@media (max-width: 991.98px) { 
+    .text-descricao, .list-bnfc{
+        font-size: 26px;
+    }
+
+    .btn-voltar_servicos{
+        font-size: 18px;
+        padding: 0.70em 11em;
+    }
+    
+}
+
+@media (max-width: 767.98px) {      
+    .text-descricao, .list-bnfc{
+        font-size: 25px;
+    }
+
+    .titulo-bnfc{
+        font-size:40px;
+    }
+}
+
+@media (max-width: 575.98px) { 
+    .text-descricao, .list-bnfc{
+        font-size: 20px;
+    }
+
+    .titulo-bnfc{
+        font-size:30px;
+    }
+
+    .btn-voltar_servicos{
+        font-size: 14px;
+        padding: 0.75em 5em;
+    }
+    
+}
+
+@media (max-width: 480px) { 
+
+}
+
+@media (max-width: 375px) {  
+
+}

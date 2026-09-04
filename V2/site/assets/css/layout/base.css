@@ -1,0 +1,135 @@
+@font-face { 
+    font-family: 'TT Backwards';
+    src: url('../../font/tt_backwards_sans_trial_regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'TT Backwards';
+    src: url('../../font/tt_backwards_sans_trial_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face { 
+    font-family: 'TT Backwards';
+    src: url('../../font/tt_backwards_sans_trial_black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../../font/Cinzel-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../../font/Cinzel-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url('../../font/Cinzel-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root{
+    /* CORES */
+    --vermelho-fire: #67080A;
+    --vermelho: #971d11;
+    --branco: #ffffff;
+    --preto: #000000;
+    --cinza-claro:#d9d9d9;
+    --cinza-medio: #b4b4b4;    
+    --cinza-escuro: #545454;
+
+    /* SLIDER */
+    --slide-width: 150px;
+    --slide-height: 100px;
+    --speed: 50s;
+    --carousel-control: #5a5a5a;
+
+    /* BORDA DUPLA FINA */
+    --borda-dFina: 1px;
+    --gap-dFina: 2px;
+    --externa-dFina: 1px;
+
+    /* BORDA DUPLA LINHA GROSSA */
+    --borda-dGrossa: 2px;
+    --gap-dGrossa: 1px;
+    --externa-dGrossa: 2px;
+}
+
+body{
+    font-family:'TT Backwards', sans-serif;
+    color: var(--preto);
+    overflow-x:hidden;
+    margin:0;
+}
+
+.titulo-cinzel{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    text-transform: uppercase;
+    color:var(--branco);
+}
+
+.SubTitulo-TT{
+    font-family: "TT Backwards";
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: uppercase;
+    color:var(--branco);
+}
+
+.titulo-cinzelSection{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color:var(--cinza-escuro);
+}
+
+.SubTitulo-TTSection{
+    font-family: "TT Backwards";
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) { 
+
+}
+
+@media (max-width: 767.98px) {      
+
+}
+
+@media (max-width: 575.98px) { 
+  
+}
+
+@media (max-width: 480px) { 
+
+}
+
+@media (max-width: 375px) {  
+
+}

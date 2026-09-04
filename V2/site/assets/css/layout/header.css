@@ -1,0 +1,126 @@
+.navbar-nav{
+    font-size:20px;
+    --bs-nav-link-color:var(--branco);
+}
+
+.nav-link:focus,
+.nav-link:hover{
+    color:var(--branco);
+    font-size:22px;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show{
+    color:var(--branco);
+    font-size:22px;
+}
+
+#mainNavbar{
+    padding:20px 0;
+    transition:all .3s ease;
+}
+
+#mainNavbar .logo{
+    transition:all .3s ease;
+}
+
+.logo-dark{
+    display:none;
+}
+
+#mainNavbar.scrolled{
+    background:var(--vermelho-fire);
+    padding:10px 0;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+#mainNavbar.scrolled .logo-light{
+    display:none;
+}
+
+#mainNavbar.scrolled .logo-dark{
+    display:block;
+}
+
+.navbar-toggler {   
+    color: var(--branco);
+    border: 2px solid var(--branco);
+    border-radius: 8px;
+}
+
+.navbar-toggler-icon{
+    color: var(--branco);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* DROPDOWN MENU */
+.dropdown-item{
+    font-size:20px;
+}
+
+.custom-dropdown{
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+    margin-top:8px;
+    padding:10px 0;
+}
+
+.custom-dropdown .dropdown-item{
+    padding:10px 20px;
+    font-size:18px;
+}
+
+.custom-dropdown .dropdown-item:hover{
+    background:var(--vermelho-fire);
+    color:var(--branco);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover{
+    color:var(--vermelho-fire);
+    background:var(--branco);
+}
+
+/* RESPONSIVO */
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) { 
+    
+}
+
+@media (max-width: 767.98px) {      
+
+}
+
+@media (max-width: 575.98px) { 
+    #mainNavbar {
+        padding: 20px 0;
+    }
+
+    #mainNavbar .logo {    
+        width: 270px;
+        height: auto;
+    }    
+}
+
+@media (max-width: 480px) { 
+    /* NAV BAR */
+    #mainNavbar {
+        padding: 20px 0;
+    }
+
+        /* NAVBAR */
+    #mainNavbar .logo {
+        width: 240px;
+    }
+}
+
+@media (max-width: 375px) {  
+
+
+}

@@ -1,0 +1,44 @@
+.bg-footer{
+    background-color: var(--vermelho-fire);
+}
+
+.text-footer{
+    color:var(--branco);
+    font-size:16px;
+}
+
+.link-ndecoration{
+    text-decoration:none;
+    color:var(--branco);
+}
+
+.text-copy{
+    color:var(--branco);
+    font-size:12px;
+    text-align:center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) { 
+ 
+}
+
+@media (max-width: 767.98px) {      
+
+}
+
+@media (max-width: 575.98px) { 
+
+}
+
+@media (max-width: 480px) { 
+
+}
+
+@media (max-width: 375px) {  
+
+}

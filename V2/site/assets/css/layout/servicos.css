@@ -1,0 +1,171 @@
+/** SERVIÇOS **/
+/* SECTION - Serviços*/
+#servicos{
+    background-image: url('../../images/background/bg-servicos.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:100vh;
+} 
+
+.img-iconeServicos{
+    width: 150px; /* ajuste conforme necessário */
+    margin-bottom: 10px;
+    border: var(--borda-dGrossa) solid var(--vermelho-fire);
+    border-radius: 88px;
+    box-shadow: 0 0 0 calc(var(--borda-dGrossa) + var(--gap-dGrossa)) var(--branco), 
+                0 0 0 calc(var(--borda-dGrossa) + var(--gap-dGrossa) + var(--externa-dGrossa)) var(--vermelho-fire);
+}
+
+.iconeServico-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+.iconeServico-linkS {
+    display: block;
+}
+
+.iconeServico-link .titulo-iconeServicos {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Cinzel", serif;
+    font-size: 18px;
+}
+
+.iconeServico-link .saibaMais-iconeServicos {
+    /* display: flex; */
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+}
+
+.img-iconeSeta {
+    width: 20px; /* seta menor */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* efeito */
+.iconeServico-link:hover .img-iconeSeta {
+    animation: setaVaiVolta 0.9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* animação */
+@keyframes setaVaiVolta {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(4px); }
+    100% { transform: translateX(0); }
+}
+
+/* SECTION - CLIENTES E FORNECEDORES */
+/* Slider */
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider::before, .slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.slider::before {
+    left: 0;
+    background: linear-gradient(to right, var(--fade-color) 0%, transparent 100%);
+}
+
+.slider::after {
+    right: 0;
+    background: linear-gradient(to left, var(--fade-color) 0%, transparent 100%);
+}
+
+.slide-track {
+    display: flex;
+    width: max-content;
+    animation: scroll var(--speed) linear infinite;
+    will-change: transform;
+}
+
+.slide-track.reverse {
+    animation: scroll-reverse var(--speed) linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-reverse {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide {
+    min-width: var(--slide-width);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: var(--borda-dFina) solid var(--cinza-medio);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina)) var(--branco),
+        0 0 0 calc(var(--borda-dFina) + var(--gap-dFina) + var(--externa-dFina)) var(--cinza-medio);
+}
+
+.slider:hover .slide-track {
+    animation-play-state: paused;
+}
+
+
+
+
+/* RESPONSIVO */
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 991.98px) { 
+    
+}
+
+@media (max-width: 767.98px) {      
+
+}
+
+@media (max-width: 575.98px) { 
+
+
+    
+}
+
+@media (max-width: 480px) { 
+
+}
+
+@media (max-width: 375px) {  
+
+}
